@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function sum(initVal, ...rest) {
+        //     let sum = 0;
+        //     for (let number of rest) sum += number;
+        //     return initVal + sum;
+        // }
+
+        // let x = sum(10, 5, 2, 5, 3); // <-- output "15"
+
+        // console.log(x)
+
+        // //array
+        // const arr = ['Fika', 'Ahmad', 'Lutfi'];
+
+        // //destructuring
+        // const [name1, name2, name3] = arr;
+
+        // //print output
+        // console.log(name1); // <-- "Fika"
+        // console.log(name2); // <-- "Ahmad"
+        // console.log(name3); // <-- "Lutfi"
+
+        // //object
+        // const obj = {
+        //     name: 'Dadan',
+        //     age: 25
+        // };
+
+        // //destructuring
+        // const {name, age} = obj;
+
+        // //print ouput
+        // console.log(`Nama saya ${name}`); // <-- "Fika Ridaul Maulayya"
+        // console.log(`Umur saya ${age}`); // <-- "Umur saya 25" (`age)
+
+        // //define variable
+        // const name = 'Fika Ridaul Maulayya';
+        // const age = 25;
+
+        // //restructuring
+        // const obj = {name, age};
+
+        // //print output
+        // console.log(obj); // <-- {name: 'Fika Ridaul Maulayya', age: 25}
+
+        // //define array
+        // const arr = [1, 2, 3, 4, 5, 6, 7];
+
+        // //looping
+        // const number = arr.map( value => {
+        //     return value;
+        // });
+
+        // //print output
+        // console.log(number); // [1, 2, 3, 4, 5, 6, 7]
+
+        // //contoh lain penggunaan arr.map di js
+        // const double = arr.map( value => {
+        //     return value * 2;
+        // });
+
+        // //print output
+        // console.log(double); // [2, 4, 6, 8, 10, 12, 14]
+
+        //define variable
+        // let done = true;
+
+        // //define a promise
+        // const task = new Promise((resolve, reject) => {
+
+        //     if(done) {
+                
+        //         resolve('Task berhasil diselesaikan');
+                
+        //     } else {
+                
+        //         reject('Task belum diselesaikan');
+            
+        //     }
+
+        // });
+
+        // // run promise
+        // console.log(task); // <-- ouput "Task berhasil diselesaikan"
+
+        // //define variable
+        // let done = false;
+
+        // //define a promise
+        // const task = new Promise((resolve, reject) => {
+
+        //     if(done) {
+                
+        //         resolve('Task berhasil diselesaikan');
+                
+        //     } else {
+                
+        //         reject('Task belum diselesaikan');
+            
+        //     }
+
+        // });
+
+        // // run promise with action
+        // task
+        //     .then(response => console.log(response))
+        //     .catch(response => console.log(response))
+
+
+        //define a promise with 3 seconds
+        const taskPromise = () => {
+            return new Promise(resolve => {    
+                setTimeout(() => resolve('Selesai'), 3000)  
+            })
+        }
+
+        //define function "task" with async
+        const task = async () => {
+            const done = await taskPromise();
+            console.log(done);
+        }
+
+        //print
+        console.log('Mulai');
+        task();
+        console.log('Akhir');
+
+    </script>
+</body>
+</html>
